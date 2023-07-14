@@ -1,3 +1,5 @@
 dependencies:
-- ./korge-mymodule
-
+- ./korma-triangulator
+versions:
+- "com.soywiz.korlibs.korma:korma": "4.0.8"
+- "com.soywiz.korlibs.korio:korio": "4.0.8"
