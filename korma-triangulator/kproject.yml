@@ -1,6 +1,6 @@
 plugins:
 #- serialization
 dependencies:
-- "maven::common::com.soywiz.korlibs.korma:korma"
+  - "maven::common::com.soywiz.korlibs.korge2:korge"
 testDependencies:
-- "maven::common::com.soywiz.korlibs.korio:korio"
+  - "maven::common::com.soywiz.korlibs.korge2:korge"

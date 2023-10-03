@@ -18,7 +18,7 @@ fun VectorPath.triangulate(): List<Triangle> =
 
 class TriangulateBuilder {
     companion object {
-        private const val SCALE = 100f
+        private const val SCALE = 100.0
     }
     private val sweep = Poly2Tri.Sweep()
     private val sc = Poly2Tri.SweepContextExt()
