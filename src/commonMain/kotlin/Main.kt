@@ -12,6 +12,7 @@ import korlibs.math.geom.triangulator.triangulate
 import korlibs.math.geom.vector.VectorBuilder
 import korlibs.math.geom.vector.VectorPath
 import korlibs.math.geom.vector.triangles
+import korlibs.math.interpolation.toRatio
 
 suspend fun main() = Korge {
     sceneContainer().changeTo({ MainMyModuleScene() })
@@ -24,7 +25,7 @@ class MainMyModuleScene : Scene() {
             stroke(Colors.WHITE, 1f) {
                 triangles(
                     buildVectorPath {
-                        circle(Point(0, 0), 50f * scale)
+                        circle(Point(0, 0), 50.0 * scale)
                         rect(-20 * scale, -20 * scale, 20 * scale, 20 * scale)
                     }
                     //.processCurves {
@@ -69,8 +70,8 @@ fun VectorPath.approximate(
         //println(curve.inflections().toList())
         //println("CURVE: $N")
         for (n in 1..N) {
-            val ratio = n.toFloat() / N.toFloat()
-            out.lineTo(curve[ratio])
+            val ratio = n.toDouble() / N.toDouble()
+            out.lineTo(curve[ratio.toRatio()])
         }
     }
 }

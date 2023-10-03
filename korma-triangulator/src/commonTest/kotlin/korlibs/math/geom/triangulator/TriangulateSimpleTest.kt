@@ -11,7 +11,7 @@ class TriangulateSimpleTest {
     @Test
     fun testTriangulation3() = suspendTest {
         buildVectorPath {
-            circle(Point(500, 500), 500f)
+            circle(Point(500, 500), 500.0)
             //rect(0, 0, 100, 100)
             line(Point(400, 400), Point(400, 600))
             line(Point(400, 600), Point(600, 400))
